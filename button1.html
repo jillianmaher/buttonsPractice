@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Button Demo</title>
+    <script src="script.js"></script>
+</head>
+<body>
+    <h2>The Button Element</h2>
+
+    <p>To view this page as a webpage, open the file through File Explorer into Chrome (or other web browser).</p>
+    
+    <p>&nbsp;</p>
+    
+    <h2>LESSON 1</h2>
+    <p>The <strong>button</strong> tag has been used to create the button below.</p>
+    <p>However, clicking it does nothing.</p>
+    <button>Default Button</button>
+    
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+
+    <p>This button will create a popup using the <strong>onclick</strong> attribute</p>
+    <button onclick="alert('Hello world')">Hello World</button>
+
+    <!--  TRY IT YOURSELF  -->
+    <h2>Try It</h2>
+    <i>Create a button that will pop up your name</i>
+
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+
+    <h2>LESSON 2</h2>
+    <p>So what ways can we make buttons look fancy?</p>
+
+    <!-- See the style below. This is often placed in the CSS file.-->
+    <!-- We will place it here in the style tag to keep everything together. -->
+    <style>
+        .button{
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            margin: 4px 2px;
+        }
+    </style>
+    <button class="button">Fancy Button</button>
+
+    <!-- Try it yourself-->
+    <h2>Try It</h2>
+    <i>Using the style tag and .button class above, make changes to the <strong>color</strong>, <strong>font-size</strong>, and <strong>padding</strong>.</i>
+    <p>Try to recreate some of the following buttons.</p>
+    
+    <h3>COLOR</h3>
+    <img src="button_color.png"/>
+    <h3>FONT SIZE</h3>
+    <img src="button_size.png"/>
+    <h3>PADDING</h3>
+    <img src="button_padding.png"/>
+
+    <h2>Try It</h2>
+    <i>Add the <strong>border-radius</strong> rule set to your style tag to make a more rounded Fancy Button</i>
+    <img src="button_round.png"/>
+
+    <p>Visit the <a href="https://www.w3schools.com/css/css3_buttons.asp">w3schools Buttons</a> page to see more about editting button styles.</p>
+    
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+
+    <h2>LESSON 3</h2>
+    <style>
+        .button2{
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            margin: 4px 2px;
+        }
+    </style>
+    <p>Let's begin using Javascript to update our button</p>
+    <p>Your Fancy Button from before has been reset using the .button2 class</p>
+    <p>The button now has an action, changing color when you click it.</p>
+    
+    <button class="button2" id="demo" 
+            onclick="document.getElementById('demo').setAttribute('style','background-color:rgb(210,50,35);')">
+        Click Me!
+    </button>
+
+    <p>The code inside the <strong>onclick</strong> attribute finds the element using <i>id</i> and then accesses the <strong>style</strong> settings.</p>
+
+    <pre>document.getElementById('demo').setAttribute('style','background-color:rgb(210,50,35);')</pre>
+
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+
+    <p>This same code could be placed inside a function in your script file.</p>
+    <p>TIP: Always make sure your script file is linked at the top of your HTML document.</p>
+
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+
+    <h2>Try It</h2>
+    <i>Update the button below to change color when clicked. Follow the steps below:</i>
+    <ol>
+        <li>Go to your <strong>script.js</strong> file and add a function titled <strong>changeColor()</strong></li>
+        <li>Inside your function, copy the code from above and paste in your function.</li>
+        <li>Test it!</li>
+        <li>Change the color from red to another color of your choice.</li>
+    </ol>
+
+    <button class="button2" id="demo" onclick="changeColor()">
+        Click Me!
+    </button>
+
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+
+    <h2>LESSON 4</h2>
+    <style>
+        .quizButton{
+            background-color: white;
+            color: black;
+            border: 2px solid #4CAF50;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            margin: 4px 2px;
+        }
+
+        .question{
+            font-size: 24px;
+        }
+    </style>
+    <p>Let's make a quiz!</p>
+    <p>&nbsp;</p>
+    <p>Make space for four buttons, they will stay next to each other using the <strong>display: inline-block;</strong> rule set.</p>
+    <p>Add three more buttons below.</p>
+
+    <p class="question">Question Here?</p>
+    <button class="quizButton">Answer One</button>
+
+    <h3>Try It: Make a Question and List of Answers.</h3>
+    <p>In the Javascript file, create a variable for the question.</p>
+    <pre>var question = "Which of the following is a school color?;</pre>
+    <p>&nbsp;</p>
+    <p>Update the question on the HTML page by adding the following script:</p>
+    <pre>document.getElementByClassName("question").innerHTML = question;</pre>
+
+    <p>&nbsp;</p>
+    <p>Now create a list with each of the different answers. </p>
+    <pre>var answers = {'Red', 'Green', 'Blue', 'Yellow'};</pre>
+
+
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+
+</body>
+</html>
